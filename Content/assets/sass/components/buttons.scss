@@ -1,0 +1,157 @@
+﻿.c-btn {
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+    padding: 15px 10px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font-family: $primary-font-a;
+    font-size: $font-large;
+    font-weight: $font-weight-700;
+    text-decoration: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    transition: background 0.8s;
+
+    &:before {
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.6);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+    }
+
+    &:focus {
+        &:before {
+            transition: all 0.5s ease-out;
+            opacity: 0;
+            width: 360px;
+            height: 360px;
+            margin-top: -180px;
+            margin-left: -180px;
+        }
+    }
+
+    &.c-btn-compact {
+        font-size: $font-medium;
+        font-weight: $font-weight-300;
+        padding: 5px 10px;
+    }
+
+    &.c-btn-semi-compact {
+        padding: 10px;
+    }
+
+    &.c-btn-smooth {
+        @include border-radius(100px);
+    }
+
+    &.c-btn-semi-smooth {
+        @include border-radius(3px);
+    }
+
+    &.c-btn-block {
+        width: 100%;
+        display: block;
+    }
+
+    &.c-btn-inline-block {
+        display: inline-block;
+    }
+
+    &.c-btn-primary {
+        background-color: $primary-color;
+        color: $white;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    &.c-btn-secondary {
+        background-color: $secondary-color;
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            box-shadow: 0 0 5px rgba(115, 132, 52, 1);
+        }
+    }
+
+    &.c-btn-bordered{
+        background-color: transparent;
+        color:$black;
+        border:2px solid $black;
+        text-decoration: none;
+
+        &:hover{
+            background-color: $primary-color;
+            color:$white;
+            border-color: $primary-color;
+        }
+    }
+
+    &.c-btn-secondary.btn-express-checkout {
+        box-shadow: none;
+        text-align: center;
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        background-color:transparent
+    }
+
+    &.c-btn-light {
+        background-color: $grey-light;
+        color: $grey-dark;
+    }
+}
+
+.social-connect-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    .c-btn-social {
+        background-color: $white;
+        width: 35px;
+        height: 35px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-right: 10px;
+        overflow: hidden;
+        border-radius: 100px;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        box-shadow: 1px 1px 10px $silver2;
+        -moz-box-shadow: 1px 1px 10px $silver2;
+        -webkit-box-shadow: 1px 1px 10px $silver2;
+        -webkit-appearance: none;
+
+        img {
+            width: 100%;
+            position: relative;
+        }
+
+        &.fb-login {
+            background-color: $fb;
+        }
+
+        &.google-login {
+            background-color: $white;
+        }
+
+        &.amazon-login{
+            background-color: #242f41;
+        }
+    }
+}

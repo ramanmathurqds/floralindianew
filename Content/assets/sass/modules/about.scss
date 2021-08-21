@@ -1,0 +1,203 @@
+.about-page{
+    font-family: $primary-font-a;
+
+    .hero-about{
+        &.pad40{
+            @media screen and (max-width:$screen-tab-landscape){
+                padding-left:0;
+                padding-right:0
+            }
+        }
+    }
+
+    .about-title{
+        text-transform: uppercase;
+        font-size: $font-super + 10;
+        letter-spacing: 2px;
+
+        @media screen and (max-width:$screen-tab-landscape){
+            font-size: $font-super;
+        }
+
+        &.small-underline{
+            &:after{
+                width:110px;
+                height:5px;
+                background-color: $secondary-color-dark3;
+                content: '';
+                position: absolute;
+                display: block;
+                bottom:-10px;
+            }
+            &.left{ 
+                &:after{
+                    left: 0;
+                }
+            }
+
+            &.right{ 
+                &:after{
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .about-para{
+        padding: 20px 40px;
+
+        @media screen and (max-width:$screen-tab-landscape){
+            padding: 0;
+        }
+
+        &.big-text{
+            font-size:$font-bigger;
+        }
+
+        &.medium-text{
+            font-size: $font-large;
+        }
+    }
+
+    .prime-service{
+        margin:0 18px;
+        padding:0 40px;
+
+        li{
+            font-size:inherit
+        }
+    }
+
+    .w-50-overlap{
+        float:left;
+        display:block;
+        width:50%; 
+    }
+
+    .w-60{
+        float:left;
+        display:block;
+        width:60%; 
+    }
+
+    .w-40{
+        float:left;
+        display:block;
+        width:40%; 
+    }
+
+    @media screen and (max-width:$screen-tab-landscape){
+        .w-50-overlap, .w-40, .w-60{
+            float:none;
+            width:100%;
+        }
+
+        .pos-left-neg, .pos-right-neg{
+            left:0;
+            right:0;
+        }
+    }
+
+    @media screen and (min-width:$screen-tab-landscape){
+        .pos-left-neg{
+            position: relative;
+            left: 40px;
+        }
+
+        .pos-right-neg{
+            position: relative;
+            right: 40px;
+        }
+    }
+
+    .help-block{
+        h1{
+            font-size:$font-super + 6;
+            margin:0;
+            padding: 0;
+        }
+
+        p{
+            font-size:$font-bigger;
+        }
+    }
+
+    .bordered-box{
+        width: 100%;
+        max-width:1300px;
+        margin:0 auto;
+        padding:20px 0;
+        border:2px dashed $secondary-color-dark3;
+    }
+
+    .slider-corporate{
+        background: $silver;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        img{
+            @media screen and (min-width:$screen-tab-landscape){
+                @include border-radius(10px);
+                opacity:0.5;
+            }
+        }
+
+        .owl-item.active.center{
+            img{
+                opacity:1
+            }            
+        }
+
+        .owl-nav{
+            button{
+                position: absolute;
+                top: 30%;
+                outline: none;
+                background: $white;
+                width:40px;
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+            }
+
+            .owl-prev{
+                left:0;
+                border-radius: 0 50px 50px 0;
+                text-align: left;
+                padding-left:8px !important;
+            }
+
+            .owl-next{
+                right:0;
+                border-radius: 50px 0 0 50px;
+                text-align: right;
+                padding-right:8px !important;
+            }
+        }
+    }
+
+    .testimonial-slider{
+        .testi-items{
+            .testi-user{
+                img{
+                    width:50px;
+                    height:50px;
+                    margin:auto;
+                    @include border-radius(100%);
+                    position: absolute;
+                    right:0;
+                }
+            }
+
+            .testi-description{
+                .testi-content{
+                    text-align:justify
+                }
+
+                p{
+                    margin-top:20px;
+                    font-weight:$font-weight-700;
+                }
+            }
+        }
+    }
+}

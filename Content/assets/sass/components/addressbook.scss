@@ -1,0 +1,139 @@
+﻿.address-wrapper {
+    font-family: $primary-font-a;
+
+    .title {
+        margin: 0;
+        padding: 0;
+        color: $grey-dark;
+        font-weight: $font-weight-700;
+    }
+
+    .address-box {
+        border: 1px solid $silver2;
+        padding: 15px 20px;
+        font-family: $primary-font;
+        cursor: pointer;
+        position: relative;
+        min-height: 200px;
+        max-height: 200px;
+
+        p {
+            margin: 0;
+            margin-bottom: 3px;
+            padding: 0;
+            font-size: $font-regular - 1;
+            color: $grey-dark2;
+            line-height: 18px;
+
+            &:first-child {
+                font-weight: $font-weight-700;
+            }
+        }
+
+        .btn-edit {
+            background-color: transparent;
+            color: $primary-dark-color;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .btn-remove-address{
+            background-color: #E94235;
+            border: none;
+            width: 25px;
+            height: 25px;
+            color: $white;
+            @include border-radius(100%);
+            position: absolute;
+            top: -11px;
+            right: -10px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .action-button {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            width: 85%;
+            margin: auto;
+
+            button {
+                border: 1px solid $primary-dark-color;
+                outline: none;
+                padding: 5px;
+                background-color: $white;
+                color: $primary-dark-color;
+                width: 100%;
+                font-size: $font-mini + 1;
+                text-transform: uppercase;
+                display: inline-block;
+                cursor: pointer;
+                margin-top: 10px;
+
+                @media screen and (max-width:1023px){
+                    padding:10px 5px;
+                    font-size:$font-regular
+                }
+
+                &:hover {
+                    background-color: $primary-dark-color;
+                    color: $white;
+                }
+
+                &.selected {
+                    background-color: $primary-dark-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .address-form {
+        form {
+            margin-top: 10px;
+
+            .btn-add-shipping-address, .btn-update-shipping-address {
+                width: 150px;
+                text-transform: uppercase;
+                padding: 8px;
+            }
+
+            .link-primary {
+                font-size: $font-medium;
+                cursor: pointer;
+                display: inline-block;
+                padding: 0 10px;
+                color: $grey-dark2;
+            }
+        }
+    }
+
+    .btn-add-new {
+        background-color: $white;
+        border: 1px solid $grey-dark2;
+        color: $grey-dark2;
+        outline: none;
+        width: 230px;
+        font-size: $font-mini;
+        text-transform: uppercase;
+        padding: 8px 0;
+        margin-top: 20px;
+        @include border-radius(3px);
+        cursor: pointer;
+
+        &:hover {
+            background-color: $grey-dark2;
+            color: $white;
+        }
+    }
+
+    .form-control {
+        font-size:$font-mini + 1;
+    }
+}

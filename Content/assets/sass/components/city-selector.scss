@@ -1,0 +1,126 @@
+﻿.city-selector {
+    width: 320px;
+    background: $white;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    box-shadow: 1px 1px 10px #ccc;
+    display: none;
+
+    @media screen and (max-width:$screen-tab-landscape){
+        position: relative;
+        width:100%;
+        box-shadow: none;
+    }
+
+    .city-selector-inner {
+        padding: 10px;
+
+        .common-heading {
+            font-size: $font-big;
+        }
+
+        @media screena and (max-width:1023px) {
+            padding: 20px 0;
+        }
+
+        .city-search-box {
+            width: 100%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid $silver-light2;
+            height: 42px;
+
+            i {
+                position: absolute;
+                left: 10px;
+                font-size: $font-large;
+                top: 12px;
+                color: $silver-light2
+            }
+
+            .txt-city {
+                position: relative;
+                top: 1px;
+                height: 36px;
+                border: none;
+                width: 100%;
+                padding: 8px 36px;
+                background-color: transparent;
+                outline: none;
+            }
+
+            .btn-locate {
+                position: absolute;
+                right: 2px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                top: 2px;
+                height: 36px;
+                padding: 0 5px;
+
+                i {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    margin-right: 5px;
+                    font-size: $font-medium;
+                    color: $grey-dark;
+                }
+            }
+
+            .list-city {
+                margin: 10px -11px;
+                padding: 0;
+                max-height: 300px;
+                overflow-y: auto;
+                padding: 10px;
+                background: #fff;
+
+                li {
+                    list-style: none;
+                    padding: 5px 10px;
+                    font-size: $font-regular;
+                    font-family: $primary-font;
+                    display: block;
+                    text-align: left;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .top-cities {
+            .search-tags {
+                text-decoration: none;
+                cursor: pointer;
+                padding: 10px;
+                text-align: center;
+                font-size: $font-mini + 1;
+                color: $grey-dark;
+                border: 1px solid $silver-light2;
+                border-radius: 30px;
+                font-weight: 500;
+                line-height: 1;
+                display: inline-block;
+                margin-right: 12px;
+                margin-bottom: 18px;
+                -webkit-transition: .3s;
+                transition: .3s;
+
+                &.active, &:hover {
+                    border-color: $primary-color;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

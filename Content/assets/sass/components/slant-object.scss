@@ -1,0 +1,76 @@
+.slanted {
+    position: relative;
+    height: 200px;
+    background: #333333;
+    float: left;
+    float: left;
+    margin: 10px;
+  }
+  .slanted.slanted-left {
+    width: 300px;
+  }
+  .slanted.slanted-right {
+    margin-left: 110px;
+    width: 200px;
+  }
+  .slanted.slanted-right.slant-to-right {
+    margin-left: 10px;
+    width: 300px;
+  }
+  .slanted.slanted-top {
+    width: 300px;
+  }
+  .slanted.slanted-bottom {
+    width: 300px;
+  }
+  
+  .slanted:after,
+  .slanted:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slanted-right.slant-to-left:after {
+    left: -100px;
+    border-right: 100px solid #333333;
+    border-top: 200px solid  #ececec;
+  }
+  .slanted-right.slant-to-right:after {
+    right: 0px;
+    border-right: 100px solid #ececec;
+    border-bottom: 200px solid  #333333;
+  }
+  .slanted-left.slant-to-right:after {
+    left: 0;
+    border-left: 100px solid #ececec;
+    border-top: 200px solid #333;
+  }
+  .slanted-left.slant-to-left:after {
+    right: 0;
+    border-left: 100px solid #333333;
+    border-bottom: 200px solid #ececec;
+  }
+  
+  .slanted-top.slant-to-left:after {
+    bottom: 0;
+    border-bottom: 100px solid #333333;
+    border-left: 300px solid #ececec;
+  }
+  .slanted-top.slant-to-right:after {
+    bottom: 0;
+    border-bottom: 100px solid #333333;
+    border-right: 300px solid #ececec;
+  }
+  .slanted-bottom.slant-to-right:after {
+    top: 100px;
+    border-bottom: 100px solid #ececec;
+    border-right: 300px solid #333333;
+  }
+  .slanted-bottom.slant-to-left:after {
+    top: 100px;
+    border-bottom: 100px solid #ececec;
+    border-left: 300px solid #333333;
+  }

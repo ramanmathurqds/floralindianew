@@ -1,0 +1,142 @@
+﻿footer {
+    width: 100%;
+    background: $secondary-color;
+    min-height: 300px;
+    padding-bottom: 40px;
+
+    &:before {
+        content: ' ';
+        display: block;
+        background: url(./../images/common/curved-pattern.png) repeat-x;
+        height: 50px;
+        position: relative;
+        top: -22px;
+    }
+
+    .footer-links {
+        .footer-nav-title {
+            font-weight: $font-weight-700;
+            font-size: $font-large;
+            color: #333;
+            text-transform: uppercase;
+
+            @media screen and (max-width:$screen-tab-landscape - 1) {
+                font-size: $font-regular;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+
+        .footer-nav {
+            margin: 15px 0 0 0;
+            padding: 0;
+            list-style-type: none;
+
+            @media screen and (max-width:$screen-tab-landscape - 1) {
+                margin-bottom: 30px;
+            }
+
+            li {
+                font-size: $font-regular;
+                line-height: 26px;
+
+                a {
+                    display: block;
+                    color: #333;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .signup-box {
+            width: 100%;
+
+
+            .signup-box-container {
+                margin: 15px 0 0 0;
+                height: 40px;
+                background: $grey-light;
+                position: relative;
+
+                label {
+                    font-size: $font-medium;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 0 5px;
+                    outline: none;
+                    font-size: $font-medium;
+                    border: none;
+                    background-color: transparent;
+                    line-height: 40px;
+                }
+
+                button {
+                    width: 90px;
+                    background: $primary-color;
+                    color: $white;
+                    padding: 0 10px;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    font-family: $primary-font;
+                    text-transform: uppercase;
+                    font-size: $font-medium;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    line-height: 40px;
+
+                    &:hover {
+                        background: $secondary-color-dark;
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            margin: 20px 0 0 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                margin-right: 25px;
+
+                a {
+                    display: block;
+                    color: $white;
+                    text-decoration: none;
+
+                    img {
+                        width: 40px;
+                    }
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-end {
+    background: #eff4f6;
+    line-height: 50px;
+    font-size: $font-medium;
+    color: $grey-dark;
+
+    img{
+        position:relative;
+        top:0px;
+    }
+}

@@ -1,0 +1,44 @@
+.order-success-page{
+    .order-status-stage{
+        .order-status-img{
+            text-align: center;
+            img{
+                width:250px;
+            }
+        }
+
+        .order-status-content{
+            .order-status-head{
+                font-family: $primary-font-a;
+                h1{
+                    font-size: $font-big + 16;
+                    color:$grey-dark;
+                    font-weight: $font-weight-300
+                }
+
+                h2{
+                    font-size: $font-big;
+                    color:$grey-dark2;
+                    font-weight: $font-weight-500
+                }
+
+                .c-btn{
+                    font-size:$font-large;
+                    padding:7px 0;
+                    min-width:180px;
+                    text-decoration:none;
+
+                    &:hover{
+                        background-color: $primary-dark-color;
+                    }
+                }
+            }
+
+            .order-body{
+                width:100%;
+                max-width:900px;
+                margin:auto;
+            }
+        }
+    }
+}

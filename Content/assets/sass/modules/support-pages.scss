@@ -1,0 +1,12 @@
+.support-stage{
+    background: $white;
+    min-height: 500px;
+    padding:40px 30px;
+    @include border-radius(3px);
+    border:1px solid $silver;
+    margin-top: 20px;
+
+    .terms-heading{
+        font-size:$font-bigger
+    }
+}

@@ -1,0 +1,107 @@
+﻿$font-base:'Lexend Deca', sans-serif;
+
+@keyframes color-animation {
+    0% {
+       background: #0586D0;
+    }
+    25% {
+       background: #ED1F24;
+    } 
+
+    50% {
+       background: #229F0D;
+    } 
+
+    75% {
+       background: #F6950C;
+    } 
+    100% {
+       background: #FF0CA6
+    } 
+ }
+
+.left-wrapper{
+    width:66%;
+    float:left;
+
+    @media screen and (max-width:1023px){
+        width:100%;
+        display:none;
+    }
+}
+
+.right-wrapper {
+    width: 34%;
+    float: left;
+    position:relative;
+
+    @media screen and (max-width:1023px) {
+        width: 100%;
+        float: none
+    }
+}
+
+.login-body {
+    animation: color-animation 10s infinite linear alternate;
+    font-family: $font-base !important;
+}
+
+.login-page {
+    font-family: $font-base !important;
+
+    .login-left {
+        width: 80%;
+        margin: auto;
+
+        @media screen and (max-width:768px) {
+            width: 98%;
+        }
+
+        h1 {
+            padding: 30% 0 0 0;
+            font-size: 70px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: $font-base !important;
+            font-weight: bold;
+
+            @media screen and (max-width:768px) {
+                padding: 5% 0 0 0;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .login-box {
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        text-align: center;
+        padding: 60px 50px;
+
+        @media screen and (max-width:768px) {
+            padding: 60px 20px;
+        }
+
+        .login-form {
+            padding: 0;
+
+            @media screen and (max-width:768px) {
+                padding: 10px 0;
+            }
+        }
+
+
+        .img-logo {
+            width: 165px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: $font-base !important;
+            font-size: 22px;
+        }
+    }
+}
+

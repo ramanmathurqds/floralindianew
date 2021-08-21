@@ -1,0 +1,204 @@
+.contact-page{
+    .overhead-content{
+        overflow: hidden;
+        .abs{
+            position: absolute;
+            left:0;
+            top:200px;
+            width:100%;
+            height:100%;
+
+            @media screen and (max-width:$screen-mob){
+                top:120px
+            }
+
+            .common-heading{
+                position: relative;
+                bottom:0;
+                font-size:$font-super * 3;
+
+                @media screen and (max-width:$screen-mob){
+                    font-size:$font-super + 12;
+                }
+            }
+
+            .contact-quick-links{
+                background-color:rgba(255,255,255, 0.8);
+                border-color: $primary-color;
+                text-transform: uppercase;
+                display: inline-block;
+                width:100%;
+                text-align: center;
+                font-size:$font-regular;
+
+                @media screen and (max-width:$screen-mob){
+                    font-size:$font-mini;
+                    width:100%;
+                    padding-left:5px;
+                    padding-right:5px;
+                }
+
+                &:hover{
+                    background-color: $primary-color;
+                    color:$white;
+                    border-color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .overpage-content{
+        .common-heading{
+            @media screen and (max-width:$screen-mob){
+                font-size:$font-super;
+            }
+        }
+
+        .contact-form{
+            padding: 0px 5px;
+
+            @media screen and (max-width:$screen-tab-portrait){
+                margin-bottom:20px;
+            }
+
+            form{
+                font-family: $secondary-font-a;
+                margin-top:10px;
+                .custom-txt{
+                    text-align: left;
+
+                    &:focus{
+                        border-bottom-color: $primary-color;
+                    }
+                }
+
+                .c-btn{
+                    width:100%;
+                    max-width: 400px;
+
+                    &:hover{
+                        background-color: $primary-dark-color;
+                    }
+                }
+            }
+        }
+
+        .branches-section{
+            font-family: $secondary-font-a;
+            color:$grey-dark;
+            .address{
+                font-size:$font-large
+            }
+
+            .i-map{
+                width:100%;
+                height: 400px;
+            }
+
+            .contact-email{
+                color:$grey-dark2;
+                font-size:$font-large;
+
+                a{
+                    color:inherit;
+                    -webkit-transition: all 0.30s ease-in-out;
+                    -moz-transition: all 0.30s ease-in-out;
+                    -ms-transition: all 0.30s ease-in-out;
+                    -o-transition: all 0.30s ease-in-out;
+
+                    &:hover{
+                        color:$primary-color
+                    }
+                }
+
+                i{
+                    display:inline-block;
+                    width:30px;
+                    color:$primary-color;
+                    font-size:$font-big
+                }
+            }
+
+            .social-contact{
+                margin-top:30px;
+                font-size: $font-large;
+
+                a{
+                    display:inline-block;
+                    font-size: $font-super + 4;
+                    padding:0 10px 0 0;
+                    color:$grey-dark;
+
+                    &.fb{
+                        &:hover{
+                            color:$fb;
+                        }
+                    }
+
+                    &.insta{
+                        &:hover{
+                            color:$primary-color;
+                        }
+                    }
+
+                    &.pinterest{
+                        &:hover{
+                            color:$pinterest;
+                        }
+                    }
+                }
+            }
+
+            &.other-branches{
+                margin-top: 60px;
+                .address-details{
+                    background-color: $white;
+                    border-radius: 10px;
+                    box-shadow: 0 0 15px rgba(0,0,0,.2);
+                    position: relative;
+                    top: 0;
+                    background-image: url('../images/common/map-bb-img.png');
+                    background-position: top center;
+                    background-size: cover;
+                    min-height: 250px;
+                    width: 100%;
+
+                    @media screen and (max-width:$screen-mob){
+                        margin-bottom:50px
+                    }
+
+                    .address-details-col{
+                        text-align:center;
+                        i{
+                            font-size: 50px;
+                            text-align: center;
+                            width: 70px;
+                            height: 70px;
+                            line-height: 60px;
+                            background: $white;
+                            border-radius: 14px;
+                            box-shadow: 4px 4px 9px rgba(0,0,0,.1);
+                            -webkit-transform: rotate(61deg);
+                            -moz-transform: rotate(61deg);
+                            transform: rotate(61deg);
+                            margin-bottom: 35px;
+                            margin-top: -42px;  
+
+                            img{
+                                transform: rotate(-61deg);
+                            }
+                        }
+                    }
+
+                    .contact-info{           
+                        padding: 0 20px 30px 20px;
+
+                        .i-map{
+                            height:250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

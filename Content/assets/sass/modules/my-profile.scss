@@ -1,0 +1,191 @@
+.profile-stage{
+    .profile-nav{
+        margin:0;
+        padding:0;
+        
+
+        li{
+            list-style: none;
+            position: relative;
+            margin-bottom: 10px;
+            border-left:2px solid transparent;
+            color:$grey-dark;
+
+            &.active, &:hover{
+                color:$primary-color;
+                background: $primary-color-light-b;
+                border-left:2px solid $primary-color;
+            }
+
+            a{
+                display: block;
+                padding:8px 0;
+                color:inherit;
+                text-decoration: none;
+
+                .nav-icon{
+                    margin:0 15px;
+                    line-height:0;
+                }
+
+                .nav-caption{
+                    line-height: 18px;
+
+                    .nav-title{
+                        font-weight:$font-weight-500;
+                        font-size:$font-large
+                    }
+                }
+            }
+
+            .icon-placeholder{
+                width:30px;
+                height:30px;
+                @include border-radius(100%)
+            }
+        }
+    }
+
+    .profile-content{
+        border-left: 1px solid #ccc;
+        padding: 0 30px;
+        min-height:100vh;
+
+        @media screen and (max-width:1023px){
+            padding: 0;
+            border-left: none;
+        }
+
+        .page-subject{
+            .page-caption{
+                margin:0;
+                padding:0;
+                color:$grey-dark;
+                font-size:18px;
+                text-transform: uppercase;
+
+                @media screen and (max-width:1023px){
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        .table {
+            .red {
+                color: red;
+            }
+            .green {
+                color: green;
+            }
+        }
+
+        .form-or-content{
+            padding:25px 30px;
+            margin-top:15px;
+
+            &.no-style{
+                padding:0;
+            }
+
+            &.with-border{
+                border:1px solid $silver-light2;
+                @include border-radius(2px);
+            }
+
+            .profile-pic-block{
+                .profile-pic{
+                    position: relative;
+                    img{
+                        width:100px;
+                        background: #cccccc;
+                        height: 100px;
+                        min-width: 100px;
+                        min-height: 100px;
+                        @include border-radius(100px);
+                        object-fit: cover;
+                        z-index: 100;
+                        position: relative;
+                    }
+
+                    .btn-profile-pic-upload{
+                        position: relative;
+                        width: 310px;
+                        background: $primary-color-light-a;
+                        color:$grey-dark-5;
+                        padding: 10px 30px;
+                        text-align: right;
+                        font-size: 18px;
+                        bottom: -27px;
+                        @include border-radius(50px);
+                        left: -54px;
+                        z-index: 1;
+                        display: inline-block;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color:$primary-color;
+                            color:$white;
+                        }
+                    }
+
+                    .btn-add-pic{
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        @include border-radius(100px);
+                        background: $primary-color;
+                        text-align: center;
+                        color: $white;
+                        bottom: 2px;
+                        left: 80px;
+                        z-index: 101;
+                        font-size: 24px;
+                        line-height: normal;
+                        cursor: pointer;
+
+                        span{
+                            position: relative;
+                            display:block;
+                            top:-4px;
+                        }
+                    }
+
+                    .btn-add-pic2{
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        @include border-radius(100px);
+                        background: $primary-color-light;
+                        text-align: center;
+                        color: $white;
+                        bottom: -3px;
+                        left: 77px;
+                        z-index: 1;
+                        font-size: 24px;
+                        line-height: normal;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .edit-profile-form{
+                .form-group{
+                    label{
+                        color:$grey-dark;
+                    }
+                }
+
+                .edit-form-button{
+                    button{
+                        width:100%;
+                        max-width:200px;
+
+                        &.c-btn-light{
+                            border:1px solid $grey-dark
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+﻿.tabbed-content {
+    margin-top:70px;
+    .nav {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 5px 0;
+        text-decoration: none;
+        background: $grey;
+        width: 150px;
+        text-align: center;
+        color:$grey-dark;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    .nav-link.disabled {
+        color: #6c757d;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid $silver3;
+
+        .nav-item {
+            margin-bottom: -1px;
+            margin-right: 10px;
+        }
+
+        .nav-link {
+            border: 1px solid transparent;
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+
+            &:hover {
+                border-color: #e9ecef #e9ecef $silver3;
+            }
+
+            &:focus {
+                border-color: #e9ecef #e9ecef $silver3;
+            }
+        }
+
+        .nav-link.disabled {
+            color: #6c757d;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        .nav-link.active {
+            color: $primary-color;
+            background-color: $white;
+            border-color: $silver3 $silver3 $white;
+        }
+
+        .nav-item.show {
+            .nav-link {
+                color: #495057;
+                background-color: $white;
+                border-color: $silver3 $silver3 $white;
+            }
+        }
+
+        .dropdown-menu {
+            margin-top: -1px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+
+    .nav-pills {
+        .nav-link {
+            border-radius: 0.25rem;
+        }
+
+        .nav-link.active {
+            color: $white;
+            background-color: #007bff;
+        }
+
+        .show {
+            > .nav-link {
+                color: $white;
+                background-color: #007bff;
+            }
+        }
+    }
+
+    .nav-fill {
+        .nav-item {
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            text-align: center;
+        }
+    }
+
+    .nav-justified {
+        .nav-item {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+
+    .tab-content {
+        padding:0 20px 50px 20px;
+        > .tab-pane {
+            display: none;
+        }
+
+        > .active {
+            display: block;
+        }
+    }
+}

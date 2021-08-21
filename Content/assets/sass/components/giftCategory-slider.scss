@@ -1,0 +1,102 @@
+﻿.gift-category {
+    .owl-carousel {
+        .owl-item img {
+            display: inline-block;
+        }
+    }
+
+    .gift-option-wrapper {
+        margin: 15px 0 0 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+
+
+        @media screen and (max-width:$screen-tab-landscape - 1) {
+            overflow-x: auto;
+            overflow-y:hidden;
+            max-width: 2000px;
+            white-space: nowrap;
+            display: block;
+        }
+
+
+
+        button.btn-category, a.btn-category {
+            .caption {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-family: $secondary-font;
+                font-size: $font-regular - 1;
+                font-weight: $font-weight-700;
+                color: $grey-dark-3;
+                text-transform: uppercase;
+                display: block;
+                letter-spacing: 3px;
+                text-decoration: none;
+
+                @media screen and (max-width:$screen-tab-landscape - 1) {
+                    font-size: $font-mini;
+                }
+            }
+
+
+            &.active, &:hover {
+                .caption {
+                    color: $primary-color
+                }
+            }
+
+            .gift-options {
+                display: inline-block;
+                padding: 20px 0;
+                text-align: center;
+
+                @media screen and (max-width:$screen-tab-landscape - 1) {
+                    padding: 10px 20px;
+                }
+
+                img {
+                    width: 60px;
+
+                    @media screen and (max-width:$screen-tab-landscape - 1) {
+                        width: 45px;
+                    }
+                }
+            }
+        }
+    }
+
+        .owl-nav {
+            @media screen and (max-width:$screen-tab-landscape - 1) {
+                display: none;
+            }
+        }
+
+        .owl-carousel {
+            .owl-item img {
+                width: 60px;
+            }
+
+            .owl-nav {
+
+
+                button {
+                    outline: none;
+                    position: absolute;
+                    top: 70px;
+
+                    &.owl-prev {
+                        left: -20px
+                    }
+
+                    &.owl-next {
+                        right: -20px
+                    }
+                }
+            }
+        }
+    }

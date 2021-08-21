@@ -1,0 +1,54 @@
+﻿.custom-checkbox {
+    input[type="checkbox"] {
+        display: none;
+
+        &:checked + label {
+            &:before {
+                background: $primary-color;
+                border: 2px solid $primary-color;
+            }
+        }
+    }
+
+    label {
+        &:before {
+            content: ' ';
+            display: inline-block;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $silver;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+.custom-radio {
+    input[type="radio"] {
+        display: none;
+
+        &:checked + label {
+            color: $primary-color;
+
+            &:before {
+                background: $primary-color;
+                border: 2px solid $primary-color;
+            }
+        }
+    }
+
+    label {
+        &:before {
+            content: ' ';
+            display: inline-block;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $silver;
+            position: relative;
+            top: 2px;
+            @include border-radius(100px);
+        }
+    }
+}

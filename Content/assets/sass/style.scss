@@ -1,0 +1,49 @@
+﻿@import './variables.scss';
+@import './mixins.scss';
+@import './fonts.scss';
+
+html, body {
+    margin: 0;
+    left: 0;
+    top: 0;
+    font-family: $primary-font;
+}
+
+@import './base/colors.scss';
+@import './layout/header.scss';
+@import './base/common.scss';
+@import './components/custom-select.scss';
+@import './components/tooltip.scss';
+@import './components/city-selector.scss';
+@import './modules/index.scss';
+@import './components/giftCategory-slider.scss';
+@import './components/product-block.scss';
+@import './components/pagination.scss';
+@import './components/owl.carousel.scss';
+@import './components/overlay.scss';
+@import './components/custom-modal.scss';
+@import './components/breadcrumbs.scss';
+@import './components/alert.scss';
+@import './components/buttons.scss';
+@import './components/checkbox.scss';
+@import './components/tabbed-content.scss';
+@import './components/range-slider.scss';
+@import './components/box-layout.scss';
+@import './components/forms.scss';
+@import './components/addressbook.scss';
+@import './components/snakbar.scss';
+@import './modules/categorypage.scss';
+@import './modules/productPage.scss';
+@import './modules/cart.scss';
+@import './modules/wishlist.scss';
+@import './modules/checkout.scss';
+@import './modules/order-status-page.scss';
+@import './modules/my-profile.scss';
+@import './modules/personal-reminder.scss';
+@import './modules/order-history.scss';
+@import './modules/track-order.scss';
+@import './modules/about.scss';
+@import './modules/contact.scss';
+@import './modules/covid-page.scss';
+@import './modules/support-pages.scss';
+@import './layout/footer.scss';

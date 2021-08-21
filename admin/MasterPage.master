@@ -1,0 +1,160 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">-->
+    <link href="/Content/admin/assets/css/lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/admin/assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="/Content/admin/assets/css/lib/jquery.datatable.css" rel="stylesheet" />
+    <link href="/Content/admin/assets/css/lib/jquery.datatable-bootstrap.css" rel="stylesheet" />
+    <link href="/Content/admin/assets/css/lib/simplebar.css" rel="stylesheet" />
+    <link href="/Content/admin/assets/css/lib/jquery-ui.css" rel="stylesheet" />
+    <link href="/Content/admin/assets/css/admin-style.css?v226" rel="stylesheet" />
+
+    <script src="/Content/admin/assets/js/lib/jquery-3.3.1.js"></script>
+    <script src="/Content/admin/assets/js/lib/bootstrap.js"></script>
+    <script src="/Content/admin/assets/js/lib/simplebar.js"></script>
+    <script src="/Content/admin/assets/js/lib/jquery.datatable.js"></script>
+    <script src="/Content/admin/assets/js/lib/jquery.datatable-bootstrap.js"></script>
+    <script src="/Content/admin/assets/js/lib/jquery-ui.js"></script>
+    <script src="/Content/admin/assets/js/admin-custom.js?v226"></script>
+    <script src="https://cdn.tiny.cloud/1/vxorl4nr8fxwj5clr0yem5nlxn1721ww4a8uqm8vtfqs5mh9/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" autocomplete="off">
+        <header class="header-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5 col-lg-6">
+                        <h1 class="store-title">FLORAL INDIA</h1>
+                    </div>
+
+                    <div class="col-7 col-lg-6 text-right">
+                        <button type="button" id="accountButton" class="common-button drop-button">
+                            <div class="account-short-name">
+                                <span id="userChar" runat="server" class="short-name"></span>
+                            </div>
+
+                            <div class="account-main-name">
+                                <asp:Label ID="displayName" runat="server" Text="Hie! SuRaj"></asp:Label>
+                            </div>
+
+                            <ul class="drop-submenu">
+                                <li>
+                                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="logout">Log Out</asp:LinkButton></li>
+                            </ul>
+                        </button>
+
+                        <button type="button" data-toggle="modal" data-target="#MasterModalCountry" id="countryButton" class="common-button drop-button">
+                            <div class="account-short-name">
+                                <asp:Image ImageUrl="https://www.floralindia.com//Content/assets/images/CountryFlags/flag-of-India.jpg" runat="server" ID="imgSelectedCountry" />
+                            </div>
+
+                            <div class="account-main-name">
+                                <asp:Label ID="lblSelectedCountry" runat="server" CssClass="text-uppercase" Text="INDIA"></asp:Label>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-2" style="border-right: 1px solid #ccc">
+                        <div class="admin-left-bar">
+                            <asp:Panel ID="pnlFloral" runat="server" Visible="false">
+                                <ul class="nav-menu">
+                                    <li><a href="/admin/orders.aspx?type=all"><i class="fas fa-tags"></i><span>Orders</span>
+                                        <asp:Panel ID="pnlPendingOrders" runat="server" Visible="false" CssClass="badge badge-theme">
+                                            <asp:Label ID="lblPendingOrders" runat="server"></asp:Label>
+                                        </asp:Panel>
+                                    </a></li>
+                                    <li><a href="/admin/promo-codes.aspx"><i class="fas fa-ticket-alt"></i><span>Promo Codes</span></a></li>
+                                    <li><a href="/admin/products.aspx?type=all"><i class="fas fa-boxes"></i><span>Products</span></a></li>
+                                    <li><a href="/admin/inclusion-pricing.aspx"><i class="fas fa-plus"></i><span>Inclusion Pricing</span></a></li>
+                                    <li><a href="/admin/category.aspx"><i class="fas fa-sitemap"></i><span>Category</span></a></li>
+                                    <li><a href="/admin/subcategory.aspx"><i class="fas fa-list-ul"></i><span>Subcategory</span></a></li>
+                                    <%--<li><a href="/admin/menus.aspx"><i class="fas fa-tags"></i> <span>Menus & Tags</span></a></li>--%>
+                                    <%--<li><a href="/admin/collections.aspx"><i class="fab fa-buffer"></i> <span>Collections</span></a></li>--%>
+                                    <li><a href="/admin/customers.aspx"><i class="fas fa-users"></i><span>Manage Customers</span></a></li>
+                                    <li><a href="/admin/occasion.aspx"><i class="fas fa-smile"></i><span>Manage Occasions</span></a></li>
+                                    <li><a href="/admin/festival.aspx"><i class="fas fa-photo-video"></i><span>Manage Festivals</span></a></li>
+                                    <li><a href="/admin/relation.aspx"><i class="fas fa-user"></i><span>Manage Relations</span></a></li>
+                                    <li><a href="/admin/delivery-slots.aspx"><i class="fas fa-shipping-fast"></i><span>Delivery Slots</span></a></li>
+                                    <li><a href="/admin/city-manager.aspx"><i class="fas fa-city"></i><span>Manage Cities</span></a></li>
+                                    <li><a href="/admin/watermark.aspx"><i class="fas fa-water"></i><span>Manage Watermarks</span></a></li>
+                                    <li><a href="/admin/users.aspx"><i class="fas fa-water"></i><span>Manage Staff</span></a></li>
+                                    <%--<li><a href="/admin/reviews.aspx"><i class="fas fa-star"></i> <span>Reviews</span></a></li>
+                                    <li><a href="/admin/header-bg.aspx"><i class="fas fa-image"></i> <span>Header Band</span></a></li>--%>
+                                </ul>
+                            </asp:Panel>
+
+                            <asp:Panel ID="pnlVendor" runat="server" Visible="false">
+                                <ul class="nav-menu">
+                                    <li><a href="/admin/orders.aspx?type=all"><i class="fas fa-tags"></i><span>Orders</span>
+                                        <asp:Panel ID="Panel1" runat="server" Visible="false" CssClass="badge badge-theme">
+                                            <asp:Label ID="Label1" runat="server"></asp:Label>
+                                        </asp:Panel>
+                                    </a>
+                                    </li>
+
+                                    <li><a href="/admin/products.aspx?type=all"><i class="fas fa-boxes"></i><span>Products</span></a></li>
+
+                                    <li><a href="/admin/delivery-slots.aspx"><i class="fas fa-shipping-fast"></i><span>Delivery Slots</span></a></li>
+
+                                    <li><a href="/admin/users.aspx"><i class="fas fa-water"></i><span>Manage Staff</span></a></li>
+                                </ul>
+                            </asp:Panel>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-10">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="MasterModalCountry">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Select Country</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <asp:TextBox ID="txtCountrySearch" runat="server" CssClass="form-control w-100" placeholder="Search country by name"></asp:TextBox>
+                            <hr />
+                        </div>
+
+                        <ul class="modal-list">
+                            <asp:ListView ID="lvCountries" runat="server">
+                                <ItemTemplate>
+                                    <li>
+                                        <asp:LinkButton ID="btnCountry" runat="server" CommandArgument='<%# Eval("CountryCode") %>' CommandName="ChangeCountry">
+                                            <asp:Image ID="imgFlag" runat="server" ImageUrl='<%# ConfigurationManager.AppSettings("rootHost").ToString() & Eval("CountryFlag") %>' />
+                                            <asp:Label ID="CountryName" runat="server" Text='<%# Eval("CountryName") %>'></asp:Label>
+                                        </asp:LinkButton>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:ListView>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

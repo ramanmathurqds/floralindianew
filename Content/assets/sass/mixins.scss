@@ -1,0 +1,23 @@
+﻿@mixin box-shadow($left, $bottom) {
+    transform: translate($left, $bottom);
+    -moz-transform: translate($left, $bottom);
+    -webkit-transform: translate($left, $bottom);
+    -ms-transform: translate($left, $bottom);
+}
+
+@mixin shadow($pos1, $pos2, $blur, $color){
+    box-shadow:$pos1 $pos2 $blur $color;
+    -moz-box-shadow:$pos1 $pos2 $blur $color;
+    -webkit-box-shadow:$pos1 $pos2 $blur $color;
+}
+
+@mixin text-shadow ($top, $left, $radius, $color) {
+    text-shadow: $top $left $radius $color;
+    -moz-text-shadow: $top, $left, $radius, $color;
+}
+
+@mixin border-radius($pixel) {
+    border-radius: $pixel !important;
+    -moz-border-radius: $pixel !important;
+    -webkit-border-radius: $pixel !important;
+}

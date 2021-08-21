@@ -1,0 +1,120 @@
+.order-history-page{
+    .order-history-tab{
+        ul{
+            margin:10px 0 0 0;
+            padding:0;
+            display:block;
+            border-bottom:1px solid $silver2;
+
+            li{
+                display: inline-block;
+                list-style: none;
+                font-size: $font-regular;
+                color:$grey-dark;
+                padding:5px 15px;
+                min-width:100px;
+                cursor: pointer;
+                text-align: center;
+                border-bottom:1px solid transparent;
+
+                a {
+                    color: inherit;
+                }
+
+                &.active, &:hover{
+                    color:$primary-color;
+                    border-bottom:1px solid $primary-color;
+                }
+            }
+        }
+    }
+
+    .profile-content{
+        .form-or-content{
+            .order-count{
+                font-size:$font-regular;
+                color:$grey-dark;
+
+                span{
+                    color:$grey-dark2;
+                    font-weight:$font-weight-500
+                }
+
+                select{
+                    border:1px solid $silver2;
+                    color:$grey-dark;
+                    background-color: $silver;
+                    display: inline-block;
+                    @include border-radius(2px);
+                    margin-left:5px;
+                }
+            }
+        }
+    }
+
+    .order-card{
+        width:100%;
+        position: relative;
+        border:1px solid $silver2;
+        min-height:100px;   
+        @include border-radius(5px);
+        margin: 15px 0;
+        
+        .order-card-head{
+            padding:10px 15px;
+            background: $silver-light;
+            color:$grey-dark;
+            font-weight: $font-weight-500;
+
+            .order-head-title{
+                text-transform: uppercase;
+                font-size: $font-large;
+                color:$grey-dark2;
+            }
+        }
+
+        .order-card-body{
+            padding:10px 15px;
+            color:$grey-dark;
+
+            p{
+                margin:0;
+                padding:0;
+            }
+
+            .delivery-time{
+                font-size:$font-big;
+                color:$grey-dark2;
+            }
+
+            .delivery-to{
+                font-size:$font-regular;
+                color:$grey-dark-3;
+            }
+
+            .cart-item{
+                .dv-prod{
+                    position: relative;
+                    display: inline;
+
+                    .qty{
+                        position: absolute;
+                        top:-5px;
+                        right:2px;
+                        width:20px;
+                        height: 20px;
+                        max-width:30px;
+                        @include border-radius(100%);
+                        text-align: center;
+                        color:$white;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+            .item-price{
+                font-size: $font-big;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.reminder-page{
+    .add-reminder{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: $font-medium;
+        padding: 6px 10px;
+        background: $secondary-color-dark2;
+        color: $white;
+        @include border-radius(3px);
+
+        &:hover{
+            background: $secondary-color-dark3;
+        }
+    }
+
+    .event-list{
+        border-bottom:1px solid lightgray;
+        padding: 10px 0;
+    }
+
+    .reminder__item-text{
+        float: left;
+
+        .reminder__item-name{
+            margin: 0;
+            font-size: .875rem;
+    
+            @media screen and (min-width:1200px){
+                font-size: 1.25rem;
+                font-weight: $font-weight-400;
+            }
+        }
+    
+        .reminder__item-info{
+            margin: 0;
+            font-size: .975rem;
+            color: grey;
+        }
+    }
+
+    .reminder__item-action{
+        float: right;
+        line-height: 32px;
+        font-size: 1rem;
+    }
+
+    .reminder-form{
+        width:100%;
+        max-width: 500px;
+        padding: 0 !important;
+
+        .save-reminder{
+            width:100%;
+            max-width:120px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .delete-reminder{
+            padding-left: 0;
+            padding-right: 0;
+            color:red;
+            text-decoration: underline;
+        }
+
+        label{margin-bottom: 0;}
+    }
+}

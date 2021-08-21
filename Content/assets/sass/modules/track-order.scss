@@ -1,0 +1,197 @@
+.trackorder-page{
+    .tracking-header{
+        font-size:$font-big;
+        color:$grey-dark;
+        font-weight:$font-weight-700;
+        margin-bottom: 10px;
+
+        .track-delivery-time{
+            color:$secondary-color-dark3
+        }
+    }
+
+    .order-item-image{
+        position: relative;
+
+        .item-qty{
+            position: absolute;
+            bottom: 0;
+            right:0;
+            display:inline-block;
+            padding: 5px 10px;
+            background: $primary-dark-color;
+            font-size: $font-regular;
+            color:$white
+        }
+    }
+
+    .tracking-info{
+        .tracking-number{
+            font-size:$font-regular;
+            color:$grey-dark;
+            font-weight:$font-weight-500;
+        }
+    }
+
+    .horizontal-tracking{
+        margin-top:30px;
+        display:flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        @media screen and (max-width:1023px){
+            display: none;
+        }
+
+        .tracking-stage{
+            width:180px;
+            position: relative;
+
+            &:before{
+                content: '. . . .';
+                display: block;
+                height: 3px;
+                width: calc(100% - 40px);
+                background-color: transparent;
+                top: -9px;
+                font-size: 56px;
+                position: absolute;
+                left: calc(-50% + 20px);
+                z-index: -1;
+                line-height: normal;
+                color: $silver;
+            }
+
+            &:first-child{
+                &:before{
+                    display:none
+                }
+            }
+
+            .tracking-round{
+                width:80px;
+                height:80px;
+                margin:auto;
+                @include border-radius(100px);
+                background-color:$silver2;
+                text-align: center;
+                z-index:2;
+
+                i{
+                    font-size:30px;
+                    top:25px;
+                    position: relative;
+                    color:$white;
+                }
+            }
+
+            &.completed{
+                .tracking-round{
+                    background-color: $primary-color;
+                }
+                .stage-name{
+                    color:$primary-color;
+                    font-weight:$font-weight-700
+                }
+
+                &:before{
+                    color:$primary-color !important;
+                }
+            }
+
+            &.activated{
+                .tracking-round{
+                    background-color: $primary-color-light;
+                }
+
+                .stage-name{
+                    color:$primary-color-light
+                }
+            }
+
+            .stage-name{
+                font-size:$font-regular;
+                margin-top:20px;
+            }
+        }
+    }
+
+    .vertical-tracking{
+        padding:35px 15px 15px 15px;
+        background:$silver;
+        min-height: 100px;
+        margin-bottom: 10px;
+
+        .v-tracking-stage{
+            position:relative;
+            height: 60px;
+
+            .step-wrapper{
+                display:flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                .v-tracking-date-time, .v-tracking-subject{
+                    font-size:$font-regular - 2;
+                    color: #777;
+                    font-weight: 700;
+                    padding: 8px 10px;
+                    line-height: 15px;
+                    width:100px;
+                }
+                
+                .v-tracking-round{
+                    width:40px;
+                    height:40px;
+                    background-color:$primary-color-light;
+                    text-align: center;
+                    @include border-radius(100px);
+                    position: relative;
+
+                    &:before{
+                        display: inline-block;
+                        content: '';
+                        position: absolute;
+                        left: 20px;
+                        top:40px;
+                        height: 100%;
+                        width: 10px;
+                        border-left: 2px solid $primary-color;
+                    }
+
+                    i{
+                        color:$white;
+                        position: relative;
+                        top:8px;
+                    }
+                }
+
+                .v-tracking-subject{
+                    padding-left:20px;
+                    width:auto
+                }
+            }
+
+            &:last-child{
+                .step-wrapper{
+                    .v-tracking-round{
+                        &:before{
+                            display:none;
+                        }
+                    }
+                }
+            }
+
+            &.completed{
+                .step-wrapper{
+                    .v-tracking-date-time, .v-tracking-subject{
+                        color:#444;
+                    }
+
+                    .v-tracking-round{
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

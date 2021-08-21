@@ -1,0 +1,33 @@
+php_flag display_errors off
+php_value error_reporting 9999
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} /(.+)/$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+####################### floralIndia Redirection Starts ###########################
+
+
+RewriteRule ^((?i)listing)$ /index.php?case=listing [B,QSA]
+RewriteRule ^((?i)listing/)$ /index.php?case=listing [B,QSA]
+
+RewriteRule ^((?i)terms-and-condition)$ /index.php?case=terms-and-condition [B,QSA]
+RewriteRule ^((?i)terms-and-condition/)$ /index.php?case=terms-and-condition [B,QSA]
+
+RewriteRule ^((?i)contact-us)$ /index.php?case=contact-us [B,QSA]
+RewriteRule ^((?i)contact-us/)$ /index.php?case=contact-us [B,QSA]
+
+RewriteRule ^((?i)about-us)$ /index.php?case=about-us [B,QSA]
+RewriteRule ^((?i)about-us/)$ /index.php?case=about-us [B,QSA]
+
+RewriteRule ^((?i)privacy-policy)$ /index.php?case=privacy-policy [B,QSA]
+RewriteRule ^((?i)privacy-policy/)$ /index.php?case=privacy-policy [B,QSA]
+
+
+RewriteRule ^([^/.]*)/([^/.]*)/([^/.]*)/([^/.]*)/([^/.]*)$ /floralindia/index.php?case=listing&countryCode=$1&SubMenuName=$2&subOfMenu=$3&ID=$4 [L]
+
+RewriteRule ^([^/.]*)/([^/.]*)/([^/.]*)/([^/.]*)$ /floralindia/index.php?case=listing&countryCode=$1&subOfMenu=$2&ID=$3 [L]
+
+AddType text/x-component .htc
